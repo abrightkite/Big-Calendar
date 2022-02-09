@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CalendarContainer from "../components/Calendar/containers/CalendarContainer";
+import CalendarContainer from "@components/Calendar/containers/CalendarContainer";
 
 const RootNavigation = () => {
   return (
