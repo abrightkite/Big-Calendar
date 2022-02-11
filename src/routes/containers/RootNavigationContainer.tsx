@@ -1,5 +1,5 @@
 import React from "react";
-import RootNavigation from "../RootNavigation";
+import RootNavigation from "@routes/RootNavigation";
 
 const RootNavigationContainer = () => {
   return <RootNavigation />;
