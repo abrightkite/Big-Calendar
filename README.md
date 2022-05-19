@@ -25,8 +25,7 @@ style 사용하기 위해서 아래의 **css 파일을 import**하고 Calendar c
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const MyCalendar = () => {
-	...
-
+  ...
   return (
     <div>
       <Calendar
@@ -76,7 +75,7 @@ export default MyCalendar;
 ```tsx
 ...
 // import momentLocalizer, moment
-import { Calendar, **momentLocalizer** } from "react-big-calendar";
+import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 
 const MyCalendar = () => {
@@ -100,13 +99,13 @@ export default MyCalendar;
 **사용법**
 
 1. moment를 인자로 받는 momentLocalizer를 생성한다.
-2. <Calendar /> 컴포넌트의 localizer 속성에 생성한 momentLocalizer를 적용한다.
+2. Calendar 컴포넌트의 localizer 속성에 생성한 momentLocalizer를 적용한다.
 
 [moment.locale 국가 코드](https://github.com/moment/moment/tree/develop/locale)
 
 ### `2` defaultView
 
-보기 단위의 **default** 를 설정한다.
+보기 단위의 **default**를 설정한다.
 
 defaultView 속성에는 `agenda` , `day` , `month` , `week` , `work_week` 값을 넣을 수 있다.
 
@@ -123,7 +122,7 @@ view 값이 변할 때마다 실행되는 callback 함수이다.
 
 ### `2.3` views
 
-일정을 보여주는 view 의 name을 배열로 받는다.
+일정을 보여주는 view의 name을 배열로 받는다.
 
 ```tsx
 views={['month', 'day', 'agenda']}
@@ -135,7 +134,7 @@ views={['month', 'day', 'agenda']}
 
 ```tsx
 <Calendar
-	defaultDate={new Date(2022, 1, 10)} // 2022년 1월 10일
+  defaultDate={new Date(2022, 1, 10)} // 2022년 1월 10일
 />
 ```
 
@@ -170,7 +169,6 @@ date 값이 변할 때마다 실행되는 callback 함수이다.
 ### `4.2` startAccessor / endAccessor
 
 **startAccessor** 는 일정이 **시작하는 날짜**에 대한 Accessor이다.
-
 **endAccessor** 는 일정이 **끝나는 날짜**에 대한 Accessor이다.
 
 ### `4.3` allDayAccessor
@@ -199,7 +197,6 @@ return (
 ### `4.4` tooltipAccessor
 
 일정에 커서를 올리면 생기는 **tooltip**(도움말)에 대한 Accessor이다.
-
 **events** 내 객체에 있는 `key`를 속성으로 가질 수 있다.
 
 ```tsx
@@ -228,7 +225,7 @@ return (
 일정을 특정한 resource로 map하는 resource objects 배열이다.
 
 resource objects는 어떤 shape와 Properties를 가질 수 있으나,
-“**title**” 또는 `resourceTitleAccessor`에 의해 제공받은 **name**과 같은`resourceIdAccessor` 로 **고유하게 식별**되어야 한다.
+“**title**” 또는 `resourceTitleAccessor`에 의해 제공받은 **name**과 같은`resourceIdAccessor`로 **고유하게 식별**되어야 한다.
 
 ### `5.1` resourceAccessor
 
@@ -236,7 +233,7 @@ resource의 **id**를 반환하는 Accessor이다.
 
 ### `5.2` resourceIdAccessor
 
-resources 배열에서 각각의 resource 에 대하여 **고유 식별자를 제공**한다.
+resources 배열에서 각각의 resource에 대하여 **고유 식별자를 제공**한다.
 
 ### `5.3` resourceTitleAccessor
 
@@ -253,15 +250,15 @@ event 가 **선택**(클릭)될 때 실행되는 callback 함수이다.
 
 ### `6.2` onDoubleClickEvent
 
-event 가 **더블클릭**될 때 실행되는 callback 함수이다.
+event가 **더블클릭**될 때 실행되는 callback 함수이다.
 
 ### `6.3` selectable
 
-**date** 을 **drag**할 수 있게 한다.
+**date**을 **drag**할 수 있게 한다.
 
 ### `6.4` onSelectSlot
 
-**date**를 **drag** 했을 때 실행되는 callback 함수이다.
+**date**를 **drag**했을 때 실행되는 callback 함수이다.
 **selectable**이 `true`일 때만 실행된다.
 
 ```tsx
@@ -282,7 +279,7 @@ Tue Feb 08 2022 08:00:00 GMT+0900 (Korean Standard Time)
 ### `6.5` onSelecting
 
 **time**을 **drag**했을 때 실행되는 함수이다.
-**month** 에서 실행되지 않는다.
+**month**에서 실행되지 않는다.
 `false`를 반환하면 선택이 막힌다.
 
 ### `6.6` longPressThreshold
@@ -374,12 +371,12 @@ drilldown action에 대하여 **이동할 view의 name**이다.
 
 ### onRangeChange
 
-calendar 에 나타나는 date 범위가 달라졌을 때 실행되는 callback 함수이다.
-**start** 와 **end**를 가진 객체 또는 배열을 반환한다.
+calendar에 나타나는 date 범위가 달라졌을 때 실행되는 callback 함수이다.
+**start**와 **end**를 가진 객체 또는 배열을 반환한다.
 
 ### length
 
-agenda view 의 date prop으로부터 **length**(number of days)를 더하여 end date prop을 결정한다.
+agenda view의 date prop으로부터 **length**(number of days)를 더하여 end date prop을 결정한다.
 
 ### toolbar
 
@@ -389,7 +386,7 @@ toolbar의 display 여부를 지정한다.
 
 ### rtl
 
-calender 를 **오른쪽에서 왼쪽**(right-to-left)방향으로 읽는다.
+calender를 **오른쪽에서 왼쪽**(right-to-left)방향으로 읽는다.
 
 ![Screen Shot 2022-02-10 at 7 21 32 PM](https://user-images.githubusercontent.com/88179771/169416531-e482f236-beb7-4f05-b7cc-e567c4d6156b.png)
 
@@ -410,7 +407,7 @@ event node에 적용될 `className`과 `style props`의 객체를 리턴하는 *
 
 time-slot node에 적용된다.
 
-! layout 이나 position을 바꾸면 calendar가 깨진다.
+! layout이나 position을 바꾸면 calendar가 깨진다.
 
 ```tsx
 (date: Date) => { className?: string, style?: Object }
@@ -487,5 +484,6 @@ main calendar의 `<div>`에 적용되는 Props이다.
 
 공식 문서에 있는 내용은 다 써보고 정리를 했지만 이 외에도 더 다양한 기능들이 있는 것을 발견했다!
 아래 링크 참고
+
 `1` [About_resizableProps](https://codesandbox.io/s/m5vr0wq5ox?file=/src/index.js)
 `2` [All Drag and Drops Props](https://jquense.github.io/react-big-calendar/examples/index.html?path=/story/addons-drag-and-drop-props-full-prop-list--page)
