@@ -1,4 +1,4 @@
-# Wellcome My React big calendar Challenge Repo!
+# Welcome My React big calendar Challenge Repo!
 React big Calendar 공식 문서에 있는 모든 APIs를 써보고 정리해보자!
 
 ## React Big Calendar
