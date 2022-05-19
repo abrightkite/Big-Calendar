@@ -99,6 +99,7 @@ export default MyCalendar;
 **사용법**
 
 1. moment를 인자로 받는 momentLocalizer를 생성한다.
+
 2. Calendar 컴포넌트의 localizer 속성에 생성한 momentLocalizer를 적용한다.
 
 [moment.locale 국가 코드](https://github.com/moment/moment/tree/develop/locale)
@@ -169,6 +170,7 @@ date 값이 변할 때마다 실행되는 callback 함수이다.
 ### `4.2` startAccessor / endAccessor
 
 **startAccessor** 는 일정이 **시작하는 날짜**에 대한 Accessor이다.
+
 **endAccessor** 는 일정이 **끝나는 날짜**에 대한 Accessor이다.
 
 ### `4.3` allDayAccessor
@@ -197,6 +199,7 @@ return (
 ### `4.4` tooltipAccessor
 
 일정에 커서를 올리면 생기는 **tooltip**(도움말)에 대한 Accessor이다.
+
 **events** 내 객체에 있는 `key`를 속성으로 가질 수 있다.
 
 ```tsx
@@ -225,6 +228,7 @@ return (
 일정을 특정한 resource로 map하는 resource objects 배열이다.
 
 resource objects는 어떤 shape와 Properties를 가질 수 있으나,
+
 “**title**” 또는 `resourceTitleAccessor`에 의해 제공받은 **name**과 같은`resourceIdAccessor`로 **고유하게 식별**되어야 한다.
 
 ### `5.1` resourceAccessor
@@ -238,6 +242,7 @@ resources 배열에서 각각의 resource에 대하여 **고유 식별자를 제
 ### `5.3` resourceTitleAccessor
 
 각각의 resource에 대하여 human readable name을 제공한다.
+
 이때 name은 header에 사용된다.
 
 ### `6` selected
@@ -259,6 +264,7 @@ event가 **더블클릭**될 때 실행되는 callback 함수이다.
 ### `6.4` onSelectSlot
 
 **date**를 **drag**했을 때 실행되는 callback 함수이다.
+
 **selectable**이 `true`일 때만 실행된다.
 
 ```tsx
@@ -279,19 +285,24 @@ Tue Feb 08 2022 08:00:00 GMT+0900 (Korean Standard Time)
 ### `6.5` onSelecting
 
 **time**을 **drag**했을 때 실행되는 함수이다.
+
 **month**에서 실행되지 않는다.
+
 `false`를 반환하면 선택이 막힌다.
 
 ### `6.6` longPressThreshold
 
-**longPress** 의 문턱을 밀리초로 받는다.
-**default** 는 `250` 이다.
-**longPressThreshold** 는 `touch device`에서 slot을 선택할 때 쓰인다.
+**longPress**의 문턱을 밀리초로 받는다.
+
+**default**는 `250` 이다.
+
+**longPressThreshold**는 `touch device`에서 slot을 선택할 때 쓰인다.
 
 ### `6.7` min / max
 
-**min**은 week과 day에서 최소 time을 제한한다
-**max**은 week과 day에서 최대 time을 제한한다
+**min**은 week과 day에서 최소 time을 제한한다.
+
+**max**은 week과 day에서 최대 time을 제한한다.
 
 ### `6.8` step
 
@@ -311,6 +322,7 @@ return (
 ### `6.9` timeslots
 
 step은 timeslot 1칸이 차지하는 시간이다.
+
 timeslot은 time group을 만드는 slot의 개수이다.
 
 ```tsx
@@ -338,11 +350,13 @@ viewport의 모서리에서부터 떨어진 **px** 이다.
 ### `7.3` onDrillDown
 
 **date header** 또는 `생략된 일정 link`를 클릭했을 때마다 실행되는 callback 함수이다.
+
 *drill down : 더 많은 정보를 찾기 위해 관련 텍스트나 아이콘 등을 클릭하여 마치 뚫고 들어가듯이 검색하는 것
 
 ### `7.4` drilldownView
 
 drilldown action에 대하여 **이동할 view의 name**이다.
+
 **getDrilldownView**가 특정되면 getDrilldownView가 쓰인다.
 
 ```tsx
@@ -355,6 +369,7 @@ drilldown action에 대하여 **이동할 view의 name**이다.
 ### `7.5` getDrilldownView
 
 기능적으로 **drilldownView**와 동등하다.
+
 차이점은 view name을 반환하는 `함수`를 받는다는 것이다.
 
 ```tsx
@@ -372,6 +387,7 @@ drilldown action에 대하여 **이동할 view의 name**이다.
 ### onRangeChange
 
 calendar에 나타나는 date 범위가 달라졌을 때 실행되는 callback 함수이다.
+
 **start**와 **end**를 가진 객체 또는 배열을 반환한다.
 
 ### length
