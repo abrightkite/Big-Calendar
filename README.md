@@ -2,12 +2,14 @@
 React big Calendar 공식 문서에 있는 모든 APIs를 써보고 정리해보자!
 
 ## React Big Calendar
+**react-big-calendar** 는 React와 최신 브라우저용으로 제작된 이벤트 일정관리 컴포넌트이다.
+**react-big-calendar** 는 `**flexbox`** 를 사용한다.
 
-### Destination 
+### Destination
+![Screen Shot 2022-02-09 at 8 48 04 PM](https://user-images.githubusercontent.com/88179771/169414476-83e1fa68-332f-4226-a1cc-8f9631a6713e.png)
 
 ### `1` 설치
-![Screen Shot 2022-02-09 at 8.48.04 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c7bb92b-8249-4c80-8c83-ba225d39ffe8/Screen_Shot_2022-02-09_at_8.48.04_PM.png)
 ```tsx
-**yarn** add react-big-calendar
-**yarn** add moment // localizer 설치
+yarn add react-big-calendar
+yarn add moment // localizer 설치
 ```
