@@ -84,8 +84,8 @@ const MyCalendar = () => {
   return (
     <div>
       <Calendar
-				...
-		    localizer={localizer}  // localizer 추가
+	...
+	localizer={localizer}  // localizer 추가
       />
     </div>
   );
@@ -98,5 +98,28 @@ export default MyCalendar;
 
 1. moment를 인자로 받는 momentLocalizer를 생성한다.
 2. <Calendar /> 컴포넌트의 localizer 속성에 생성한 momentLocalizer를 적용한다.
+ [moment.locale 국가 코드](https://github.com/moment/moment/tree/develop/locale)
 
- [*moment.locale 국가 코드](https://github.com/moment/moment/tree/develop/locale)
+### `2` defaultView
+
+보기 단위의 **default** 를 설정한다.
+
+defaultView 속성에는 `**agenda**` , `**day**` , `**month**` , `**week**` , `**work_week**` 값을 넣을 수 있다.
+
+ex ) **agenda**
+![Screen Shot 2022-02-10 at 1 30 48 PM](https://user-images.githubusercontent.com/88179771/169415432-2ddba486-1335-406e-a10f-c395960d3111.png)
+### `2.1` view
+
+**current** 보기 단위를 설정한다.
+
+### `2.2` onView
+
+view 값이 변할 때마다 실행되는 callback 함수이다.
+
+### `2.3` views
+
+일정을 보여주는 view 의 name 을 배열로 받는다.
+
+```tsx
+views={['month', 'day', 'agenda']}
+```
