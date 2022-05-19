@@ -38,7 +38,7 @@ const MyCalendar = () => {
 
 ### `3` 진행 상황
 
-![Screen Shot 2022-02-10 at 9.49.31 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80d615d6-831f-4dfb-bfac-a737d8d11578/Screen_Shot_2022-02-10_at_9.49.31_PM.png)
+![Screen Shot 2022-02-10 at 9 49 31 PM](https://user-images.githubusercontent.com/88179771/169414972-4bb893f5-f179-42ba-975a-b2d0a1ef3a8e.png)
 
 ```tsx
 import React from "react";
