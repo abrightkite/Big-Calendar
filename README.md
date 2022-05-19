@@ -35,3 +35,32 @@ const MyCalendar = () => {
   );
 };
 ```
+
+### `3` 진행 상황
+
+![Screen Shot 2022-02-10 at 9.49.31 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80d615d6-831f-4dfb-bfac-a737d8d11578/Screen_Shot_2022-02-10_at_9.49.31_PM.png)
+
+```tsx
+import React from "react";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+
+const MyCalendar = () => {
+  moment.locale("ko-KR");
+  const localizer = momentLocalizer(moment);
+
+  return (
+    <div>
+      <Calendar
+        localizer={localizer}
+        startAccessor="start"
+        endAccessor="end"
+        style={{ height: 500 }}
+      />
+    </div>
+  );
+};
+
+export default MyCalendar;
+```
