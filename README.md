@@ -2,6 +2,16 @@
 
 React big Calendar 공식 문서에 있는 모든 APIs를 써보고 정리해보자!
 
+리액트, 자바스크립트, 타입스크립트, HTML, SCSS, CSS
+
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=HTML&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=CSS&logoColor=white"/>
+
+
+
 ## React Big Calendar
 
 React Big Calendar는 React와 최신 브라우저용으로 제작된 이벤트 일정관리 컴포넌트이다.
