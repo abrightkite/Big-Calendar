@@ -296,7 +296,7 @@ Tue Feb 08 2022 08:00:00 GMT+0900 (Korean Standard Time)
 
 **default** 는 `**250**` 이다.
 
-**longPressThreshold** 는 **`touch device`** 에서 slot 을 선택할 때 쓰인다.
+**longPressThreshold** 는 `touch device` 에서 slot 을 선택할 때 쓰인다.
 
 ### `6.7` min / max
 
@@ -348,7 +348,7 @@ viewport의 모서리에서부터 떨어진 **px** 이다.
 
 ### `7.3` onDrillDown
 
-**date header** 또는 **`생략된 일정 link`**를 클릭했을 때마다 실행되는 callback 함수이다.
+**date header** 또는 `생략된 일정 link`를 클릭했을 때마다 실행되는 callback 함수이다.
 
 *drill down : 더 많은 정보를 찾기 위해 관련 텍스트나 아이콘 등을 클릭하여 마치 뚫고 들어가듯이 검색하는 것
 
@@ -370,7 +370,7 @@ drilldown action에 대하여 **이동할 view의 name** 이다.
 
 기능적으로 **drilldownView** 와 동등하다.
 
-차이점은 view name을 반환하는 **`함수`**를 받는다는 것이다.
+차이점은 view name을 반환하는 `함수`를 받는다는 것이다.
 
 ```tsx
 <Calendar
@@ -382,3 +382,114 @@ drilldown action에 대하여 **이동할 view의 name** 이다.
   }}
 />
 ```
+
+## Other API Props
+
+### onRangeChange
+
+calendar 에 나타나는 date 범위가 달라졌을 때 실행되는 callback 함수이다.
+
+**start** 와 **end** 를 가진 객체 또는 배열을 반환한다.
+
+### length
+
+agenda view 의 date prop으로부터 **length**(number of days)를 더하여 end date prop 을 결정한다.
+
+### toolbar
+
+toolbar의 display 여부를 지정한다.
+![Screen Shot 2022-02-10 at 3 29 37 PM](https://user-images.githubusercontent.com/88179771/169416442-adce1d28-f94d-4e5a-b804-a4f0661e399a.png)
+
+### rtl
+
+calender 를 **오른쪽에서 왼쪽**(right-to-left)방향으로 읽는다.
+![Screen Shot 2022-02-10 at 7 21 32 PM](https://user-images.githubusercontent.com/88179771/169416531-e482f236-beb7-4f05-b7cc-e567c4d6156b.png)
+
+### eventPropGetter
+
+event node 에 적용될 `className` 과 `style props` 의 객체를 리턴하는 **함수를 선택적으로 제공**한다.
+
+```tsx
+(
+	event: Object,
+  start: Date,
+  end: Date,
+  isSelected: boolean
+) => { **className?**: string, **style?**: Object }
+```
+
+### slotPropGetter
+
+time-slot node 에 적용된다.
+
+! layout 이나 position을 바꾸면 calendar가 깨진다.
+
+```tsx
+(date: Date) => { className?: string, style?: Object }
+```
+
+### dayPropGetter
+
+day background 에 적용된다.
+
+그 외 **slotPropgetter** 과 동일한 특성을 갖는다.
+
+### showMultiDayTimes
+
+showMultiDayTimes 는 일정이 다른 날까지 이어지는 event 에 한하여 구체적인 start time 과 end time 을 calendar 에 반영한다.
+![Screen Shot 2022-02-10 at 8 34 23 PM](https://user-images.githubusercontent.com/88179771/169416677-1d018892-b86b-4d21-9613-36565d51f41e.png)
+
+![Screen Shot 2022-02-10 at 8 33 40 PM](https://user-images.githubusercontent.com/88179771/169416688-e72f3e2d-dd5d-4b7e-80db-3494b73da8d3.png)
+
+```tsx
+<Calendar
+	...
+	showMultiDayTimes={true}
+/>
+```
+**주의!**
+일정이 하루 내에 이뤄지는 날에는 영향을 주지 않는다.
+![Screen Shot 2022-02-10 at 8 36 53 PM](https://user-images.githubusercontent.com/88179771/169416792-12cbb2e7-1ef7-443a-a1c7-0e3363fa4e38.png)
+
+### scrollToTime
+
+Determines how far down the scroll pane is initially scrolled down.
+
+처음 scroll down 되기 위해 내려야 할 pane 의 정도를 결정한다.
+
+### culture
+
+calendar 에 구체적인 **culture code** 를 명시한다.
+
+### formats
+
+calendar에게 어떻게 포맷하고 date를 보여주는 지 전달한다.
+
+[formats](https://www.notion.so/formats-2d88c047928e4ef99d69cbcee5cc3073)
+
+### components
+
+component custom 하여 calendar section 의 rendering 방법을 바꾼다.
+
+Event component 가 전체 calender 에서 명시가능하기 때문에 각 view type 마다 다른 component을 제공할 수 있다.
+
+```tsx
+let **components** = {
+  event: MyEvent, // used by each view (Month, Day, Week)
+  toolbar: MyToolbar,
+  agenda: {
+     event: MyAgendaEvent // with the agenda view use a different component to render events
+  }
+}
+...
+
+<Calendar **components={components}** />
+```
+
+### messages
+
+String messages used throughout the component, override to provide localizations
+
+### elementprops
+
+Props passed to main calendar `<div>`
