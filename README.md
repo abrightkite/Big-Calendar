@@ -1,46 +1,13 @@
-# Getting Started with Create React App
+# Wellcome My React big calendar Challenge Repo!
+React big Calendar 공식 문서에 있는 모든 APIs를 써보고 정리해보자!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Big Calendar
 
-## Available Scripts
+### Destination 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `1` 설치
+![Screen Shot 2022-02-09 at 8.48.04 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c7bb92b-8249-4c80-8c83-ba225d39ffe8/Screen_Shot_2022-02-09_at_8.48.04_PM.png)
+```tsx
+**yarn** add react-big-calendar
+**yarn** add moment // localizer 설치
+```
