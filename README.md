@@ -1,7 +1,7 @@
-# Welcome My React big calendar Challenge Repo!
+# Welcome My React big calendar Challenge!
 React big Calendar 공식 문서에 있는 모든 APIs를 써보고 정리해보자!
 
-### React Big Calendar
+## React Big Calendar
 **react-big-calendar** 는 React와 최신 브라우저용으로 제작된 이벤트 일정관리 컴포넌트이다.
 **react-big-calendar** 는 `flexbox` 를 사용한다.
 
@@ -64,3 +64,39 @@ const MyCalendar = () => {
 
 export default MyCalendar;
 ```
+	
+## API Props
+### `1` localizer
+
+국가 코드를 토대로 date format 을 설정한다.
+
+```tsx
+...
+// import momentLocalizer, moment
+import { Calendar, **momentLocalizer** } from "react-big-calendar";
+import **moment** from "moment";
+
+const MyCalendar = () => {
+
+  **moment.locale("ko-KR");** // *국가 코드
+  **const localizer = momentLocalizer(moment); //** date format 지정
+
+  return (
+    <div>
+      <Calendar
+				...
+		    localizer={localizer}  // localizer 추가
+      />
+    </div>
+  );
+};
+
+export default MyCalendar;
+```
+
+**사용법**
+
+1. moment를 인자로 받는 momentLocalizer를 생성한다.
+2. <Calendar /> 컴포넌트의 localizer 속성에 생성한 momentLocalizer를 적용한다.
+
+ [*moment.locale 국가 코드](https://github.com/moment/moment/tree/develop/locale)
